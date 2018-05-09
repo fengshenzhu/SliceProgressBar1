@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.fengshenzhu.libspb.SliceProgressBar
+        android:id="@+id/sliceProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:gap_color="@android:color/white"
+        app:gap_width="100dp"
+        app:bg_color="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progress_color="@color/colorAccent"
+        app:progress_max="100"
+        app:progress_min="50" />
+
+    <Button
+        android:id="@+id/subProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sliceProgressBar" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/subProgress"
+        app:layout_constraintLeft_toRightOf="@id/subProgress"
+        app:layout_constraintTop_toTopOf="@id/subProgress" />
+
+    <Button
+        android:id="@+id/addProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@id/progress"
+        app:layout_constraintTop_toTopOf="@id/subProgress" />
+
+    <Button
+        android:id="@+id/subSlice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-s"
+        app:layout_constraintTop_toBottomOf="@id/subProgress" />
+
+    <Button
+        android:id="@+id/addSlice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+s"
+        app:layout_constraintLeft_toRightOf="@id/subSlice"
+        app:layout_constraintTop_toTopOf="@id/subSlice" />
+
+    <Button
+        android:id="@+id/updateLastSColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="updateLastS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subSlice" />
+
+</android.support.constraint.ConstraintLayout>
